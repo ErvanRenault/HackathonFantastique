@@ -4,10 +4,122 @@
     android:layout_height="match_parent"
     tools:context="com.mitic.ervan.hackathonfantastique.Accueil">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello " />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:elevation="13dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:text="Ville : "
+                android:id="@+id/textViewVille"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="0.75"
+                android:layout_height="50dp"
+                android:id="@+id/villeevenement"
+                android:layout_toRightOf="@+id/textViewVille"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Date : "
+            android:gravity="bottom"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/jourevenement"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=" octobre à : "
+            android:gravity="bottom"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/dateevenement"
+        />
+
+        <TextView
+            android:layout_weight="0.2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="H"
+            android:gravity="bottom"/>/>
+    </LinearLayout>
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Incription"
+            android:gravity="bottom"/>
+
+        <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/inscriptionevenement"
+        android:entries="@array/inscription">
+        </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/mapaccueil"
+                android:onClick="mapAccueil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Carte"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/listeaccueil"
+                android:onClick="listAccueil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Liste"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 
 </FrameLayout>

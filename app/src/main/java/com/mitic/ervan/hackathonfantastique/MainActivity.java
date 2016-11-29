@@ -9,21 +9,23 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.mitic.ervan.hackathonfantastique.event.ListeEvenement;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
+import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener,GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener,Accueil.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener,GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener,Accueil.OnFragmentInteractionListener,ListeEvenement.OnFragmentInteractionListener,MapRechercheEvent.OnFragmentInteractionListener {
 
     private List<Object> lesevents = new ArrayList<Object>();
 
@@ -64,8 +66,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
             }
         });
-
-
 
         Accueil accueil=Accueil.newInstance("param1","param2");
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
@@ -111,6 +111,16 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
     }
 
+    public void mapAccueil(View view){
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
+        Fragment mapEvent = MapRechercheEvent.newInstance("param1","param2");
+        fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
+    }
+    public void listAccueil(View view){
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
+        Fragment listEvent = ListeEvenement.newInstance("param1","param2");;
+        fragmentManager.replace(R.id.activity_main,listEvent).addToBackStack(null).commit();
+    }
     @Override
     public void onFragmentInteraction(Uri uri) {
 
