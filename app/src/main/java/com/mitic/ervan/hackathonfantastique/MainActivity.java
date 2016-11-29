@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,7 +16,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.mitic.ervan.hackathonfantastique.event.ListeEvenement;
+import com.mitic.ervan.hackathonfantastique.dummy.DummyContent;
+import com.mitic.ervan.hackathonfantastique.event.Event;
+import com.mitic.ervan.hackathonfantastique.event.ListEvent;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
@@ -26,7 +27,7 @@ import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener,GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener,Accueil.OnFragmentInteractionListener,ListeEvenement.OnFragmentInteractionListener,MapRechercheEvent.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener,GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener,Accueil.OnFragmentInteractionListener,MapRechercheEvent.OnFragmentInteractionListener, ListEvent.OnListFragmentInteractionListener,Event.OnFragmentInteractionListener{
 
     private List<Object> lesevents = new ArrayList<Object>();
 
@@ -98,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     private void gererEvent(){
-        Log.d("TEST", "Ce TEST " + lesevents.size());
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment gestionEvenement=GestionEvenement.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,gestionEvenement).addToBackStack(null).commit();
@@ -122,11 +122,19 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
     public void listAccueil(View view){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment listEvent = ListeEvenement.newInstance("param1","param2");;
+        Fragment listEvent = ListEvent.newInstance(1);;
         fragmentManager.replace(R.id.activity_main,listEvent).addToBackStack(null).commit();
     }
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+        String titre = item.content;
+        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+        Fragment event = Event.newInstance(titre);
+        fragmentManager.replace(R.id.activity_main,event).addToBackStack(null).commit();
     }
 }
