@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Gérer les événements"
+        android:id="@+id/gestevent" />
+    <item android:title="Créer un parcours"
+        android:id="@+id/creerparc" />
+    <item android:title="Chercher un parcours"
+        android:id="@+id/searchpar" />
+
+</menu>
