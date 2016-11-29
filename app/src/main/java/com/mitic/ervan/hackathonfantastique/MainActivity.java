@@ -136,5 +136,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         Fragment event = Event.newInstance(titre);
         fragmentManager.replace(R.id.activity_main,event).addToBackStack(null).commit();
+
     }
 }
