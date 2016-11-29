@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.mitic.ervan.hackathonfantastique.dummy.DummyContent;
 import com.mitic.ervan.hackathonfantastique.evenement.Data;
+import com.mitic.ervan.hackathonfantastique.evenement.Evenement;
 import com.mitic.ervan.hackathonfantastique.evenement.EvenementFactory;
 import com.mitic.ervan.hackathonfantastique.event.Event;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("");
-        Query refQuery = myRef.orderByKey().endAt("100");
+        Query refQuery = myRef.orderByKey().endAt("99");
 
 
         // Read from the database
@@ -55,26 +56,14 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 evenementFactory.ParseEvenement(dataSnapshot);
             }
-
             @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
             @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
+            public void onChildRemoved(DataSnapshot dataSnapshot) {}
             @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) { }
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
+            public void onCancelled(DatabaseError databaseError) {}
         });
 
         Accueil accueil=Accueil.newInstance("param1","param2");
@@ -98,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
                 return super.onOptionsItemSelected(item);
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -110,12 +100,18 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         Fragment gestionEvenement=GestionEvenement.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,gestionEvenement).addToBackStack(null).commit();
     }
+
     private void  createParcours(){
-        data.print();
+
+        for (Evenement event : data.getAllEventsBy100()){
+            Log.d("TEST", "createParcours: " + event.toString());
+        }
+
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment creerParcours= CreerParcours.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
     }
+
     private void searchParcours(){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment rechercheParcours= RechercheParcours.newInstance("param1","param2");
@@ -128,11 +124,13 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         Fragment mapEvent = MapRechercheEvent.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
+
     public void listAccueil(View view){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment listEvent = ListEvent.newInstance(1);;
         fragmentManager.replace(R.id.activity_main,listEvent).addToBackStack(null).commit();
     }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 
