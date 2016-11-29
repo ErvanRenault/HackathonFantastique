@@ -25,6 +25,7 @@ import com.mitic.ervan.hackathonfantastique.event.Event;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
+import com.mitic.ervan.hackathonfantastique.map.MyMapFragment;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
     public void mapAccueil(View view){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment mapEvent = MapRechercheEvent.newInstance("param1","param2");
+        Fragment mapEvent = MyMapFragment.newInstance();
         fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
 
