@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,7 +16,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.mitic.ervan.hackathonfantastique.dummy.DummyContent;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
 import com.mitic.ervan.hackathonfantastique.data.EvenementFactory;
@@ -99,11 +97,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     private void  createParcours(){
-
-        for (Evenement event : data.getAllEventsBy100()){
-            Log.d("TEST", "createParcours: " + event.toString());
-        }
-
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment creerParcours= CreerParcours.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
@@ -122,9 +115,15 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
 
+    public void mapDetail(View view){
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
+        Fragment mapEvent = MapRechercheEvent.newInstance("param1","param2");
+        fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
+    }
+
     public void listAccueil(View view){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment listEvent = ListEvent.newInstance(1);;
+        Fragment listEvent = ListEvent.newInstance(1, data);
         fragmentManager.replace(R.id.activity_main,listEvent).addToBackStack(null).commit();
     }
 
@@ -134,11 +133,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
-        String titre = item.content;
+    public void onListFragmentInteraction(Evenement event_old) {
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
-        Fragment event = Event.newInstance(titre);
+        Fragment event = Event.newInstance(event_old);
         fragmentManager.replace(R.id.activity_main,event).addToBackStack(null).commit();
-
     }
+
 }

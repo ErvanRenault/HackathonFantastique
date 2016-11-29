@@ -37,6 +37,7 @@ public class Field {
     public String liens_du_lieu;
     public String mots_cles_fr;
     public String nom_du_lieu;
+    public String organisateur;
     public String pays;
     public String publics_concernes;
     public String region;

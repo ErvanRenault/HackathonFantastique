@@ -1,16 +1,24 @@
 package com.mitic.ervan.hackathonfantastique.event;
 
-import android.content.Context;
-import android.net.Uri;
-import android.os.Bundle;
+
 import android.support.v4.app.Fragment;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mitic.ervan.hackathonfantastique.data.Evenement;
 import com.mitic.ervan.hackathonfantastique.R;
+
+import java.io.InputStream;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,18 +35,19 @@ public class Event extends Fragment {
     private static final String TITRE_EVENT = "param1";
 
     // TODO: Rename and change types of parameters
-    private String titreEvent;
+    private static Evenement evenementStatic;
     private OnFragmentInteractionListener mListener;
+
 
     public Event() {
         // Required empty public constructor
     }
 
     // TODO: Rename and change types and number of parameters
-    public static Event newInstance(String titre) {
+    public static Event newInstance(Evenement evenement) {
         Event fragment = new Event();
+        evenementStatic = evenement;
         Bundle args = new Bundle();
-        args.putString(TITRE_EVENT, titre);
         fragment.setArguments(args);
         return fragment;
     }
@@ -47,8 +56,10 @@ public class Event extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            titreEvent = getArguments().getString(TITRE_EVENT);
-            Log.d("-----------------", "onCreate: "+ titreEvent);
+            //TODO
+            //ENLEVER LE STATIC
+           // titreEvent = getArguments().getString(TITRE_EVENT);
+           // Log.d("-----------------", "onCreate: "+ titreEvent);
         }
     }
 
@@ -57,7 +68,23 @@ public class Event extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         myInflatedView = inflater.inflate(R.layout.fragment_event, container, false);
-        ((TextView)myInflatedView.findViewById(R.id.nomevent)).setText(titreEvent);
+        ((TextView)myInflatedView.findViewById(R.id.nomevent)).setText(evenementStatic.fields.titre_fr);
+        ((TextView)myInflatedView.findViewById(R.id.adresseevent)).setText(evenementStatic.fields.adresse);
+        ((TextView)myInflatedView.findViewById(R.id.dateevent)).setText(evenementStatic.fields.dates);
+        ((TextView)myInflatedView.findViewById(R.id.heureevent)).setText(evenementStatic.fields.horaires_detailles_fr);
+        ((TextView)myInflatedView.findViewById(R.id.telephoneevent)).setText(evenementStatic.fields.telephone_du_lieu);
+        if(evenementStatic.fields.image != null) {
+            new DownloadImageTask((ImageView) myInflatedView.findViewById(R.id.imageView3)).execute(evenementStatic.fields.image);
+        }
+        if(evenementStatic.fields.organisateur != null)
+            ((TextView)myInflatedView.findViewById(R.id.nomorganisateur)).setText("Organisé par : " + evenementStatic.fields.organisateur);
+        else
+            ((TextView)myInflatedView.findViewById(R.id.nomorganisateur)).setText("");
+        if(evenementStatic.fields.lien_d_inscription != null)
+            ((TextView)myInflatedView.findViewById(R.id.textView4)).setText(evenementStatic.fields.lien_d_inscription);
+        else
+            ((TextView)myInflatedView.findViewById(R.id.textView4)).setText("");
+
         return myInflatedView;
     }
 
@@ -98,5 +125,30 @@ public class Event extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+        ImageView bmImage;
+
+        public DownloadImageTask(ImageView bmImage) {
+            this.bmImage = bmImage;
+        }
+
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
+            return mIcon11;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            bmImage.setImageBitmap(result);
+        }
     }
 }

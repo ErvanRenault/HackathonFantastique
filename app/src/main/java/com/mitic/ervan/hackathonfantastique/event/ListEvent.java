@@ -11,8 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mitic.ervan.hackathonfantastique.R;
-import com.mitic.ervan.hackathonfantastique.dummy.DummyContent;
-import com.mitic.ervan.hackathonfantastique.dummy.DummyContent.DummyItem;
+import com.mitic.ervan.hackathonfantastique.data.Data;
+import com.mitic.ervan.hackathonfantastique.data.Evenement;
+
 
 /**
  * A fragment representing a list of Items.
@@ -27,6 +28,7 @@ public class ListEvent extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+    private static Data data;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -37,8 +39,9 @@ public class ListEvent extends Fragment {
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static ListEvent newInstance(int columnCount) {
+    public static ListEvent newInstance(int columnCount, Data donnee) {
         ListEvent fragment = new ListEvent();
+        data = donnee;
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -68,7 +71,7 @@ public class ListEvent extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyEvenementRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyEvenementRecyclerViewAdapter(data.getAllEvents(), mListener));
         }
         return view;
     }
@@ -103,6 +106,6 @@ public class ListEvent extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Evenement event);
     }
 }
