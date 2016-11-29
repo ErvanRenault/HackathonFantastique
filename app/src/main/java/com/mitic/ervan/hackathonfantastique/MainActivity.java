@@ -16,6 +16,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.mitic.ervan.hackathonfantastique.event.ListeEvenement;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
@@ -36,14 +37,15 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("");
+        Query refQuery = myRef.orderByKey().endAt("100");
 
         // Read from the database
-        myRef.addChildEventListener(new ChildEventListener() {
+        refQuery.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Object value = dataSnapshot.getValue(Object.class);
                 lesevents.add(value);
-                Log.d("TEST", "Number : " + lesevents.size());
+                //Log.d("TEST", "Number : " + lesevents.size());
             }
 
             @Override
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         fragmentManager.add(R.id.activity_main,accueil).commit();
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     private void gererEvent(){
+        Log.d("TEST", "Ce TEST " + lesevents.size());
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment gestionEvenement=GestionEvenement.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,gestionEvenement).addToBackStack(null).commit();
