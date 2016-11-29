@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "672188087205-n9g21lr08qmgngpa125tdfivou0brn13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mitic.ervan.hackathonfantastique",
+            "certificate_hash": "39A6F6EB8905A62E285A68B4266AFCF17DDADD5C"
+          }
+        },
+        {
           "client_id": "672188087205-is7qptqm48ahluhnha633bc0bi3vvghb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
