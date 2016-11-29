@@ -18,14 +18,52 @@
             android:layout_width="match_parent"
             android:layout_height="262dp"
             android:layout_gravity="top"
+            android:orientation="horizontal"
             android:weightSum="1">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="261dp"
                 app:srcCompat="@android:drawable/picture_frame"
                 android:id="@+id/imageView3"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:layout_weight="0.5"/>
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/nomevent"
+                    android:paddingTop="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="nom de l'evenement"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/adresseevent"
+                    android:paddingTop="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse VRAIMENT TRES TRES TRES TRES TRES TRES LONGUE"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/dateevent"
+                    android:paddingTop="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/heureevent"
+                    android:paddingTop="30sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="heure"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -40,8 +78,8 @@
                 android:layout_height="49dp">
 
                 <TextView
-                    android:id="@+id/nomevent"
-                    android:text="Nom de l'évent"
+                    android:id="@+id/nomorganisateur"
+                    android:text="Nom de l'organisateur"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

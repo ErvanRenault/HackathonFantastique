@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.mitic.ervan.hackathonfantastique.R;
 
@@ -20,8 +21,9 @@ import com.mitic.ervan.hackathonfantastique.R;
  * create an instance of this fragment.
  */
 public class Event extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+    private View myInflatedView;
+
     private static final String TITRE_EVENT = "param1";
 
     // TODO: Rename and change types of parameters
@@ -54,7 +56,9 @@ public class Event extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_event, container, false);
+        myInflatedView = inflater.inflate(R.layout.fragment_event, container, false);
+        ((TextView)myInflatedView.findViewById(R.id.nomevent)).setText(titreEvent);
+        return myInflatedView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
