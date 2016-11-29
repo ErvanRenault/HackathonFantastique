@@ -1,4 +1,4 @@
-package com.mitic.ervan.hackathonfantastique.evenement;
+package com.mitic.ervan.hackathonfantastique.data;
 
 import com.google.firebase.database.DataSnapshot;
 

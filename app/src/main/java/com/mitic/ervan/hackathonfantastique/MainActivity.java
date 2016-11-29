@@ -18,9 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.mitic.ervan.hackathonfantastique.dummy.DummyContent;
-import com.mitic.ervan.hackathonfantastique.evenement.Data;
-import com.mitic.ervan.hackathonfantastique.evenement.Evenement;
-import com.mitic.ervan.hackathonfantastique.evenement.EvenementFactory;
+import com.mitic.ervan.hackathonfantastique.data.Data;
+import com.mitic.ervan.hackathonfantastique.data.Evenement;
+import com.mitic.ervan.hackathonfantastique.data.EvenementFactory;
 import com.mitic.ervan.hackathonfantastique.event.Event;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
@@ -28,12 +28,8 @@ import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener,GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener,Accueil.OnFragmentInteractionListener,MapRechercheEvent.OnFragmentInteractionListener, ListEvent.OnListFragmentInteractionListener,Event.OnFragmentInteractionListener{
 
-    private List<Object> lesevents = new ArrayList<Object>();
     private Data data;
     private EvenementFactory evenementFactory;
 
@@ -61,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {}
             @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) { }
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
             @Override
             public void onCancelled(DatabaseError databaseError) {}
         });

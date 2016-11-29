@@ -1,4 +1,4 @@
-package com.mitic.ervan.hackathonfantastique.evenement;
+package com.mitic.ervan.hackathonfantastique.data;
 
 import android.util.Log;
 
@@ -13,6 +13,9 @@ import java.util.List;
 public class Data {
 
     private HashMap<String, Evenement> evenements = new HashMap<String, Evenement>();
+    private HashMap<String, Parcours> parcours = new HashMap<String, Parcours>();
+
+    // Evenements
 
     public void AddEvenement (String id, Evenement evenement) {
         evenements.put(id, evenement);
@@ -22,10 +25,6 @@ public class Data {
         return evenements.get(id);
     }
 
-    public int getSize () {
-        return evenements.size();
-    }
-
     public List<Evenement> getAllEventsBy100(){
         List<Evenement> res = new ArrayList<Evenement>();
         for (String key : evenements.keySet())
@@ -33,9 +32,22 @@ public class Data {
         return res;
     }
 
-    public void print () {
-        String res = evenements.size() + " évènements: \n";
-        for (String key : evenements.keySet())
-            Log.d("ADIEU: ", evenements.get(key).toString());
+    //
+
+    // Parcours
+
+    public boolean idParcoursUtilise (String id) {
+        return parcours.keySet().contains(id);
     }
+
+    public void addParcours (String id, List<Evenement> evenements) {
+        parcours.put(id, new Parcours(id, evenements));
+    }
+
+    public Parcours getParcoursById (String id) {
+        return parcours.get(id);
+    }
+
+    //
+
 }
