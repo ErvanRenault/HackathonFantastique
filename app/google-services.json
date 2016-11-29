@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "672188087205",
+    "firebase_url": "https://hackathon-f448a.firebaseio.com",
+    "project_id": "hackathon-f448a",
+    "storage_bucket": "hackathon-f448a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672188087205:android:8bd58c8825583988",
+        "android_client_info": {
+          "package_name": "com.mitic.ervan.hackathonfantastique"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672188087205-is7qptqm48ahluhnha633bc0bi3vvghb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mitic.ervan.hackathonfantastique",
+            "certificate_hash": "9C7D25CCB5CB07C7195BF986910B0F52B9CC5B93"
+          }
+        },
+        {
+          "client_id": "672188087205-0gg79pbvptf4fiidvbd37g4bgdodhumr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mitic.ervan.hackathonfantastique",
+            "certificate_hash": "59F8F721E9D868811070E4BA288D9F5A876EBB5F"
+          }
+        },
+        {
+          "client_id": "672188087205-i7n5tse8m5ba1qig65lpfbec3vvtbb6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkY9xhnPG19CUL2Hb47wL1UY_UeBaiBnc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672188087205-i7n5tse8m5ba1qig65lpfbec3vvtbb6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.mitic.ervan.hackathonfantastique.parcours;
+package com.mitic.ervan.hackathonfantastique.evenement;
 
 /**
  * Created by ce on 29/11/16.
@@ -51,5 +51,14 @@ public class Field {
     public String type_d_animation;
     public String types_de_public;
     public String ville;
+
+    public String toString () {
+        return "Fields: "
+                + "\nadresse: " + adresse
+                + ", \ndates: " + dates
+                + ", \nimage: " + image
+                + ", \nnom_du_lieu: " + nom_du_lieu
+                + ", \ntelephone_du_lieu: " + telephone_du_lieu;
+    }
 
 }
