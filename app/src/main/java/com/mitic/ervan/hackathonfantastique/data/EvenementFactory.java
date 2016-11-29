@@ -16,6 +16,7 @@ public class EvenementFactory {
 
     public void ParseEvenement (DataSnapshot dataSnapshot) {
         Evenement res = new Evenement();
+        res.id = dataSnapshot.getKey();
         for (DataSnapshot row : dataSnapshot.getChildren()) {
             switch (row.getKey()) {
                 case "datasetid": res.datasetid = row.getValue(String.class); break;
