@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Gérer les événements"
-        android:id="@+id/gestevent" />
+        android:id="@+id/gestionevenement" />
     <item android:title="Créer un parcours"
-        android:id="@+id/creerparc" />
+        android:id="@+id/creationparcours" />
     <item android:title="Chercher un parcours"
-        android:id="@+id/searchpar" />
+        android:id="@+id/rechercheparcours" />
 
 </menu>
