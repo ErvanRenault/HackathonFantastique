@@ -2,6 +2,9 @@ package com.mitic.ervan.hackathonfantastique.data;
 
 import android.util.Log;
 
+import com.mitic.ervan.hackathonfantastique.data.Evenement;
+import com.mitic.ervan.hackathonfantastique.data.Parcours;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +29,11 @@ public class Data {
         return evenements.get(id);
     }
 
-    public List<Evenement> getAllEventsBy100(){
+    public int getSize () {
+        return evenements.size();
+    }
+
+    public List<Evenement> getAllEvents(){
         List<Evenement> res = new ArrayList<Evenement>();
         for (String key : evenements.keySet())
             res.add(evenements.get(key));

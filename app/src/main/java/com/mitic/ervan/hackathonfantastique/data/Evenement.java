@@ -5,9 +5,13 @@ package com.mitic.ervan.hackathonfantastique.data;
  */
 
 public class Evenement {
+
+    // From original data
+    public String id;
     public Geometry geometry;
     public Field fields;
     public String datasetid;
     public String record_timestamp;
     public String recordid;
+    //
 }

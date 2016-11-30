@@ -100,7 +100,8 @@
                         android:text="Map"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.06" />
+                        android:layout_weight="0.06"
+                        android:onClick="mapDetail" />
 
                     <TextView
                         android:text="adresseMail"
@@ -122,7 +123,7 @@
                         android:text="telephone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView5"
+                        android:id="@+id/telephoneevent"
                         android:gravity="center"
                         android:paddingBottom="10dp" />
 
