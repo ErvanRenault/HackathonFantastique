@@ -1,5 +1,6 @@
 package com.mitic.ervan.hackathonfantastique;
 
+import android.database.DataSetObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,9 +12,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -101,8 +104,9 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     private void  createParcours(){
+
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment creerParcours= CreerParcours.newInstance("param1","param2");
+        Fragment creerParcours= CreerParcours.newInstance("param1",data);
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
     }
 

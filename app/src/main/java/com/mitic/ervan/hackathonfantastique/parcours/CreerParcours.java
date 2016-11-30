@@ -7,8 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.mitic.ervan.hackathonfantastique.R;
+import com.mitic.ervan.hackathonfantastique.data.Data;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,7 +25,7 @@ public class CreerParcours extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static Data data;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -39,15 +42,15 @@ public class CreerParcours extends Fragment {
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param data2 Parameter 2.
      * @return A new instance of fragment CreerParcours.
      */
     // TODO: Rename and change types and number of parameters
-    public static CreerParcours newInstance(String param1, String param2) {
+    public static CreerParcours newInstance(String param1, Data data2) {
         CreerParcours fragment = new CreerParcours();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        data = data2;
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,7 +60,6 @@ public class CreerParcours extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -65,7 +67,17 @@ public class CreerParcours extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_creer_parcours, container, false);
+
+        View inf = inflater.inflate(R.layout.fragment_creer_parcours, container, false);
+
+        data.initializeCities();
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this.getContext(), android.R.layout.simple_spinner_item, data.getVilles());
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner sItems = (Spinner) inf.findViewById(R.id.spinnerville);
+        sItems.setAdapter(adapter);
+
+        return inf;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
