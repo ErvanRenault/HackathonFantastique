@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -39,16 +40,22 @@ import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.map.MyMapFragment;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
+import com.mitic.ervan.hackathonfantastique.parcours.Parcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.SpinAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener, GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener, Accueil.OnFragmentInteractionListener, MapRechercheEvent.OnFragmentInteractionListener, ListEvent.OnListFragmentInteractionListener, Event.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements
+        CreerParcours.OnFragmentInteractionListener,
+        GestionEvenement.OnFragmentInteractionListener,
+        RechercheParcours.OnFragmentInteractionListener,
+        Accueil.OnFragmentInteractionListener,
+        MapRechercheEvent.OnFragmentInteractionListener,
+        ListEvent.OnListFragmentInteractionListener,
+        Event.OnFragmentInteractionListener,
+        Parcours.OnListFragmentInteractionListener{
 
     private Data data;
     private EvenementFactory evenementFactory;
@@ -62,12 +69,9 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         data = new Data();
         evenementFactory = new EvenementFactory(data);
 
-
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("");
         Query refQuery = myRef.orderByKey().endAt("99");
-
 
         // Read from the database
         refQuery.addChildEventListener(new ChildEventListener() {
@@ -75,32 +79,27 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 evenementFactory.ParseEvenement(dataSnapshot);
             }
-
             @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-            }
-
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
             @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-            }
-
+            public void onChildRemoved(DataSnapshot dataSnapshot) {}
             @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-            }
-
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
+            public void onCancelled(DatabaseError databaseError) {}
         });
 
-        Accueil accueil = Accueil.newInstance("param1", "param2");
-        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
-        fragmentManager.add(R.id.activity_main, accueil).commit();
+        Accueil accueil=Accueil.newInstance("param1","param2");
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
+        fragmentManager.add(R.id.activity_main,accueil).commit();
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.retouraccueil:
+                retourAccueil();
+                return true;
             case R.id.gestionevenement:
                 gererEvent();
                 return true;
@@ -122,10 +121,20 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         return true;
     }
 
-    private void gererEvent() {
+    private void retourAccueil(){
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
-        Fragment gestionEvenement = GestionEvenement.newInstance("param1", "param2");
-        fragmentManager.replace(R.id.activity_main, gestionEvenement).addToBackStack(null).commit();
+        Fragment accueil = Accueil.newInstance("param","param");
+        FragmentManager fm = getSupportFragmentManager();
+        fragmentManager.replace(R.id.activity_main,accueil).addToBackStack(null).commit();
+        for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+            fm.popBackStack();
+        }
+
+    }
+    private void gererEvent(){
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
+        Fragment gestionEvenement=GestionEvenement.newInstance("param1","param2");
+        fragmentManager.replace(R.id.activity_main,gestionEvenement).addToBackStack(null).commit();
     }
 
     private void createParcours(){
@@ -133,7 +142,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment creerParcours= CreerParcours.newInstance("param1",data, this);
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
-
     }
 
     private void searchParcours() {
@@ -143,8 +151,14 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
     }
 
-    public void ajouterEvenement(View view) {
+    public void rechercheParcours(View view){
+        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+        // TODO : renvoyer vers la liste
+        Fragment parcours = Parcours.newInstance(1,null);
+        fragmentManager.replace(R.id.activity_main,parcours).commit();
+    }
 
+    public void ajouterEvenement(View view) {
         ViewGroup layout = (ViewGroup) findViewById(R.id.elementsparcours);
         Spinner spinner = (Spinner) findViewById(R.id.spinnerparcours);
 
@@ -206,11 +220,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         parcoursCourant.clear();
     }
 
-
-    public void mapAccueil(View view) {
-        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+    public void mapAccueil(View view){
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment mapEvent = MapRechercheEvent.newInstance("param1", "param2");
-        fragmentManager.replace(R.id.activity_main, mapEvent).addToBackStack(null).commit();
+        fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
 
     public void mapDetail(View view) {
@@ -218,10 +231,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
     }
 
-    public void listAccueil(View view) {
-        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+    public void listAccueil(View view){
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment listEvent = ListEvent.newInstance(1, data);
-        fragmentManager.replace(R.id.activity_main, listEvent).addToBackStack(null).commit();
+        fragmentManager.replace(R.id.activity_main,listEvent).addToBackStack(null).commit();
     }
 
     @Override
@@ -265,7 +278,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         Fragment event = Event.newInstance(event_old);
         fragmentManager.replace(R.id.activity_main,event).addToBackStack(null).commit();
-
     }
 
     @Override

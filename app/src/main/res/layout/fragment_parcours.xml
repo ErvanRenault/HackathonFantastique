@@ -2,12 +2,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mitic.ervan.hackathonfantastique.parcours.Parcours">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Parcours" />
-
+        android:paddingBottom="40dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@+id/boutonnext">
+           <TextView
+                android:id="@+id/titreparcours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text = "TITRE PARCOURS"
+                android:textAlignment="center"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:layoutManager="LinearLayoutManager"
+                tools:context="com.mitic.ervan.hackathonfantastique.parcours.Parcours"
+                tools:listitem="@layout/fragment_evenement" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/boutonnext"
+            android:text="next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
 </FrameLayout>
