@@ -48,7 +48,7 @@ public class Data {
         myRef.startAt(null, String.valueOf(marqueur)).limitToFirst(100).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                evenementFactory.parseEvenement(dataSnapshot);
+                AddEvenement(dataSnapshot.getKey(), evenementFactory.parseEvenement(dataSnapshot));
                 marqueur++;
             }
             @Override
