@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements
 
     public void mapAccueil(View view){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment mapEvent = MapRechercheEvent.newInstance();
+        Fragment mapEvent = MyMapFragment.newInstance((float)48.1150604,(float)-1.6389847, "ISTIC");
         fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
 
