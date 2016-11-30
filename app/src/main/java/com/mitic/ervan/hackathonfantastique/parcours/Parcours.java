@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mitic.ervan.hackathonfantastique.R;
 import com.mitic.ervan.hackathonfantastique.data.Data;
@@ -82,6 +83,7 @@ public class Parcours extends Fragment {
             }
             recyclerView.setAdapter(new MyEventParcoursRecyclerViewAdapter(parcours.getEvenements(), mListener));
         }
+        ((TextView)view.findViewById(R.id.titreparcours)).setText(parcours.getId());
         return view;
     }
 
