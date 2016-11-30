@@ -39,7 +39,6 @@ import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.map.MyMapFragment;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
-import com.mitic.ervan.hackathonfantastique.parcours.Parcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.SpinAdapter;
 
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements
         MapRechercheEvent.OnFragmentInteractionListener,
         ListEvent.OnListFragmentInteractionListener,
         Event.OnFragmentInteractionListener,
-        Parcours.OnListFragmentInteractionListener{
+        com.mitic.ervan.hackathonfantastique.parcours.Parcours.OnListFragmentInteractionListener{
 
     private Data data;
     private List<Evenement> parcoursCourant = new ArrayList<Evenement>();
@@ -72,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements
          * Chargement des 100 premières données
          */
         data.chargerLaSuite();
+
+        /**
+         * Chargement des parcours
+         */
+        data.chargerLesParcours();
 
         Accueil accueil=Accueil.newInstance("param1","param2");
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
@@ -137,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements
     public void rechercheParcours(View view){
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         // TODO : renvoyer vers la liste
-        Fragment parcours = Parcours.newInstance(1,null);
+        Fragment parcours = com.mitic.ervan.hackathonfantastique.parcours.Parcours.newInstance(1,null);
         fragmentManager.replace(R.id.activity_main,parcours).commit();
     }
 
@@ -186,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements
         if (data.getParcoursById(temp) != null)
             Log.d("TOAST: ", "Le nom de parcours \"" + temp + "\" est déjà utilisé.");
         else {
-            data.addParcours(temp, cloneParcours());
+            data.addParcours(new com.mitic.ervan.hackathonfantastique.data.Parcours(temp, cloneParcours()));
             clearParcoursCourant();
             createParcours();
         }

@@ -1,6 +1,11 @@
 package com.mitic.ervan.hackathonfantastique.data;
 
+import android.util.Log;
+
 import com.google.firebase.database.DataSnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by yoan on 29/11/16.
@@ -14,7 +19,7 @@ public class EvenementFactory {
         this.data = data;
     }
 
-    public void ParseEvenement (DataSnapshot dataSnapshot) {
+    public Evenement parseEvenement (DataSnapshot dataSnapshot) {
         Evenement res = new Evenement();
         res.id = dataSnapshot.getKey();
         for (DataSnapshot row : dataSnapshot.getChildren()) {
@@ -27,7 +32,7 @@ public class EvenementFactory {
                 default:
             }
         }
-        data.AddEvenement(dataSnapshot.getKey(), res);
+        return res;
     }
 
     private Geometry parseGeometry (DataSnapshot dataSnapshot) {
@@ -64,5 +69,18 @@ public class EvenementFactory {
             }
         }
         return res;
+    }
+
+    public Parcours parseParcours (DataSnapshot dataSnapshot) {
+        String nom = dataSnapshot.getKey();
+        List<Evenement> evenements = new ArrayList<Evenement>();
+        for (DataSnapshot d : dataSnapshot.getChildren()) {
+            if (d.getKey().equals("parcoursRestant")) {
+                for (DataSnapshot e : d.getChildren())
+                    evenements.add(parseEvenement(e));
+            }
+        }
+        Log.d("PARCOURS ADDED (name)", nom);
+        return new Parcours(nom, evenements);
     }
 }

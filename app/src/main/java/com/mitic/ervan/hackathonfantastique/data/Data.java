@@ -8,11 +8,16 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.mitic.ervan.hackathonfantastique.event.MyEvenementRecyclerViewAdapter;
+import com.google.firebase.database.FirebaseDatabase;
+import com.mitic.ervan.hackathonfantastique.data.Evenement;
+import com.mitic.ervan.hackathonfantastique.data.Parcours;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+
+import static android.R.attr.data;
 
 
 /**
@@ -22,6 +27,7 @@ import java.util.Set;
 public class Data {
     private int marqueur;
     private DatabaseReference myRef;
+    private DatabaseReference refParcours;
     private HashMap<String, Evenement> evenements = new HashMap<String, Evenement>();
     private HashMap<String, Parcours> parcours = new HashMap<String, Parcours>();
     private HashMap<String, List<Evenement>> villesEvenements = new HashMap<String, List<Evenement>>();
@@ -33,6 +39,7 @@ public class Data {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference("");
         myRef.orderByKey();
+        refParcours = database.getReference("Parcours");
         evenementFactory = new EvenementFactory(this);
         marqueur = 0;
     }
@@ -41,8 +48,28 @@ public class Data {
         myRef.startAt(null, String.valueOf(marqueur)).limitToFirst(100).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                evenementFactory.ParseEvenement(dataSnapshot);
+                evenementFactory.parseEvenement(dataSnapshot);
                 marqueur++;
+            }
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {}
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
+            @Override
+            public void onCancelled(DatabaseError databaseError) {}
+        });
+    }
+
+    public void chargerLesParcours() {
+
+        // Read from the database
+        refParcours.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Log.d("PARCOURS ADDED (snap)", dataSnapshot.getKey()+"");
+                addParcoursFromFirebase(evenementFactory.parseParcours(dataSnapshot));
             }
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
@@ -79,11 +106,17 @@ public class Data {
         return parcours.keySet().contains(id);
     }
 
-    public void addParcours (String id, List<Evenement> evenements) {
-        parcours.put(id, new Parcours(id, evenements));
-        Log.d("SIZE: ", parcours.size()+"");
-        for (String s : parcours.keySet())
-            Log.d(s, parcours.get(s).toString());
+    public void addParcours (Parcours parcours) {
+        //this.parcours.put(parcours.getId(), parcours);
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase.getReference("Parcours").child(parcours.getId()).setValue(parcours);
+    }
+
+    public void addParcoursFromFirebase (Parcours parcours) {
+        this.parcours.put(parcours.getId(), parcours);
+        Log.d("SIZE: ", this.parcours.size()+"");
+        for (String s : this.parcours.keySet())
+            Log.d(s, this.parcours.get(s).toString());
     }
 
     public Parcours getParcoursById (String id) {

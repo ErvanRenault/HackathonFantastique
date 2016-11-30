@@ -3,633 +3,633 @@
 
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ac8365c87591065db07f7bac8551504504832cd4">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.6.1_8ffb40248f65aa6de76cf77f2b0a8ffab40e0d2f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.6.1_3d8aeb357bbe7ceb61e913aca15516a53d118b65/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.1_9c54db326fa5e238c5e767b8309644bc300f5242/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="159494eb362396d073d8c922b77e40c0da5fc5bc">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.6.1_bcff0e553f55866fce40be18c108b22761b0e956/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_7de8d429fcb110d3e6997349f23c5c45baab2c9e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ee0ccb43f6ab276191b7f2d77c305fa9beb26db9">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-9.6.1_3ed8b288548434bc90d2ebe4ddb720e2cfe311a3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_14a02584c73b1cc15a093d71ee72b0452184c8c0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="f6aa7c76cbaa867e05dbad0afab1ef0e65c4e55f">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.6.1_16e9052abcf4833e5c19d9dfbd11f4833203fb58/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="4df40545c9b875855f3dd9d4928e5d07f07c20ba">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.6.1_283f655e32a57646800dc43828fbe74a7aac722f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.6.1_877188c32de8269f1233b5b34d72590705f14f1b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_de4df1e9a16575d9fbe28a985ad9c3a4b7bc6b68/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="1810ae0df0a1b9b539ce97df54e96f2bf8f5ff94">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.6.1_ea0198216cd20b2a6f4f73639146255415db3149/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="3fd3d7f5076e1f919ef93f0ef17f25c852531ee1">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22c120799be323bfb72a0ed90f1253b289fdf528/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_a77799eddaba0cca692805a80704883280c30ebb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_3bf44938632932da8c25100030f69559ff5e20ed/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="babb25794a7599069d34705038744c5760a9a88c">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-9.6.1_829355240d4e6d48d26697d06bbf3b4098ee4933/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a53ac0560ab915a02c50d2e5c7b003381e6fb5e3">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.6.1_e17fb2a5e0dcad10962aa31fd22c8634f79276cd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_1ccff46f36f8074dca6905fadf3da56bffe0824e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ee61ace5f3e488fc610e1c67693c49186a441f32">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-9.6.1_40a9c43c4fd55b58c5792cb7ef70482c1d961258/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_c23121d29c2e4b67041073f1bfea548e73a9644e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.6.1_f3c6cef02d7b258e296083fb17203cb07050b83f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_d7a49bb84727099bdff30c632a3469b34f95b458/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.1_fea76b13c1e3cba97f6b3f3f80232e34a8ce1c64/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="da3f763afd39da1c947d9442847c837e9182a09f">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.6.1_0643cd71b58ad1c53c884d2cc145c70a2d15805a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_320ff4a13f0c7d4213c1cf040f9588b1b653fde5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_3edacfe84561e4551a9a4c116a2d21105c2c09f8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_43e4b32cc8eb6f50471081aba2d3dfb608645950/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_59a59d484349d96a5da06c5224c15191c329dff9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.6.1_1ac15f5e10bf0b75e87b133ef029e849e939f907/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="9c0cf3d4f9d7d076f301e110b92e18ae23da12c2">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-9.6.1_2152853c8535b8591429b4994ea9e0a7c302c2ff/classes.dex" />
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-9.6.1_33e5a1ba86105c57a6e9d2d4052c001585f41770/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.6.1_07613f6a1b243752470054a0cbd87a434ff2fa40/classes.dex" />
+        sha1="f6aa7c76cbaa867e05dbad0afab1ef0e65c4e55f">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-9.6.1_310828535188f02317eb7d565ef41c328f03f198/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.6.1_83b70937ce25c78a7d4299ecbb1c510e8bea8569/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0e0e0681c26a1f575d3e4c542182dd59bab75fd6">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.6.1_6201034b453fc6ad3f9ae037796716a136ceb275/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_5ee8ee62535ee495b03df54b05e4bfa01526eb80/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.1_3df565db033375cc93e5b2366ecbfba4710ac64c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_a554f7a9b9f74213a600c21aa3d6d853fa1d6b0c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.6.1_d4392775abdf4b8e5b540623cd5f5e031c86eea9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6ff796a3173787afe2e712f3aec6f5b99796118e">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.6.1_34704d168d78ba4a7a609432bd1e216e3b857767/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.1_4e217028ec4420a7388e00600b686db67e4faecb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_13146ef9f364b9f7d3c98e9717a1e5a80184396a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.6.1_76b4ae8e61e6026a7fbafa6d548de0a921c57b5e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.1_3292bf57a95d51375f5c8c2f9aa34fbdb8f16103/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.6.1_cf32fb54aa3cc1f6bd1a5dc269d83a4b485d06f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="518adc52081d41724932b41bc132e4d50a352b86">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.6.1_1fb912d4d978c10ca015a73ce9a28db1970929a1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.6.1_deab23b1e099c5b4ec7db79288bce73c6788bca8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e0cc9d0659d494cfb034d99e4440ce3b56288c78">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b1e371461b56ef6d1cc8b003fc09e287081e8827/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="cdddf21e0a8205e9955661061d1735ed10e44a7b">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.6.1_f57755f9e0b594776d4dc39f492477ad4a06e0f7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8c6ef5bd4072f8cda2b89d8356ea7d8acd0683aa">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.6.1_a575a7c64e340bc18ba5c423959ce43aee3b66c6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.6.1_7d821bf6c2698f7190a23e2d264a093da5753e4f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.1_0e89b8e690af2d3d7fd3aa33b796f7eab30f9da4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.6.1_7697a21409b753cb5715d975f952e7ac03f7f1f6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_0d6970c71ef9707523b1c7dab86b6d255127badf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.6.1_c76d6b394be76a4f649d543cbfb4618f1341a7a4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.6.1_c73635d2ce038b8c38cbad458f51eba297da10fe/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8cfab99638405c9909191a230a7d42f97f17c03d/classes.dex" />
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_7198b830c86c67521da6c3bd0189da88ffebe7d4/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-9.6.1_afebd1350c117cd64ee3b36dd82b75e1c86df43d/classes.dex" />
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_88becde23f07773d709dbe6a0d1550c7cec2b4dc/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="f0e96478ca3147bc588aadb9ae467d85b42473cc">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.6.1_9b60b4d9aa934400e835860c2da8e1d7b41898fd/classes.dex" />
+        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.6.1_65f4dda5b88859122df5fb3931c53e0ab4815f30/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.6.1_0b47c1e40740d963fa4079ecd5c3c4cdab0fe238/classes.dex" />
+        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.6.1_337214e730cc17b9056fe37a6767a1679583ac8d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f4bd23295b8355016295d0f2329294339942e0f9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.6.1_38ed11b2e87a397ad86d11b80858718c74201bbd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_bd49df3584c4de91033bde138915f9651a5d3b01/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="a76a6983a23788b3689524d4bed763955afbd306">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.6.1_83b4ecdf73089cfe3896421afab77f8d489d69ce/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.6.1_a7719c4513c7849429a05ee10d6e1c75d3f5d679/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="0cae6511c5705869cacf199f8abb0ea84cd10157">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.6.1_403804b38b094941a93d5633303138798abf4371/classes.dex" />
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.6.1_a99457a681485537ded73504001639772ae4a01a/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a63934db9da46b8407a9e7b21921d364dc78e276/classes.dex" />
+        sha1="a76a6983a23788b3689524d4bed763955afbd306">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-9.6.1_e112813cbbaa124d21fe9f40e1fcc78e92df12cc/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="d45c048bb1c55cf963899190e507065aea8e5be9">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.6.1_5333e362fee34f2989920872de02588d9f29e26c/classes.dex" />
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_62451cb67f283093609108ee927a5b7157a74049/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="cc39b4bcc9e7062891db90d5a752fa9e4986f447">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.6.1_50ece1543af99177eb95ed58a95b3dceeac81262/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="c828add497d2b7a3de7c047bf72050cd4b7521a1">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.6.1_c923e5e5f1af6780a8f0cafcd5655b5cd5c34bea/classes.dex" />
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.6.1_beab66a8192550f5da5bfd0782b95a88359af58c/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.6.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="a136366045678579300d161de97c2211c4c4f7a0">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.6.1_80330be8e6959f02905c3f694a1f36c012f96f08/classes.dex" />
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_78b4c53e66f0d96f129532458ede7e7e541e8af4/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.6.1_cc45f3643eca1754c333e17d1f02366594ee9fe2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cdddf21e0a8205e9955661061d1735ed10e44a7b">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.6.1_91744dc099e2248ef99021cba5841c347375d065/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cc39b4bcc9e7062891db90d5a752fa9e4986f447">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-9.6.1_52c13b788b931b048103d0c3b8f4bc591bb19960/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.6.1_435181a183d5e997bdf44d1c2d8274c8236967ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee0ccb43f6ab276191b7f2d77c305fa9beb26db9">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-9.6.1_7d70de7b0e25e2fa31acd8332fa4214d9cf2ca69/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1d4603cd5ad96a13b2af945e8503b42c8abe9cbb">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d7ce2947fc19ad83e6b6e0a17c344a3b2cad6434/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_842057dd4d940886dc16aabca2bc928177f6fad2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee61ace5f3e488fc610e1c67693c49186a441f32">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-9.6.1_cb1839fedc53995fcbcd1dd205dd166b14573776/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9668926d444ff6cfc3cec1252f7e1001e8473029">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9f9b106330e6b8ed94676a0932a143339180dd20/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-9.6.1_129aa6cd0e84f1e4807fcc6d0770bb3573ed89ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/florian/M2/MMM/HackathonFantastique/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_cb6fd02a8dda3ffd619fd69089b5df5b1277236e/classes.dex" />
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_d47037a27190c63f51d8c6472b80ad3c1697eba7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0e0e0681c26a1f575d3e4c542182dd59bab75fd6">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.6.1_f516758d244815baa4e2409bcb14b73ad34311c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8c6ef5bd4072f8cda2b89d8356ea7d8acd0683aa">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.6.1_d185e13f4589b90b525281c9244724a2b2ab8523/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="babb25794a7599069d34705038744c5760a9a88c">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-9.6.1_59dc4d2288a2cc2bffaaa2d1ef6b588a8cadecbf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-9.6.1_67e9b271ffb44e65c4c91daa755c2b997767e3d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_12daf403f84f3f7c19eed30349b45deb60cc6fae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a136366045678579300d161de97c2211c4c4f7a0">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.6.1_c04879e916b6fb1b39c63e1f8efd4be786b51940/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_4c0f71c2427c1f2db5a3fd99a7e4ef632636d6bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-9.6.1_f0fdd01c03dac2f57fe02bdc8463680687e7ac26/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-module-9.6.1_7175aa33fdf926276bc22ab898b3488e12ab63fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="159494eb362396d073d8c922b77e40c0da5fc5bc">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.6.1_b2c90623c80c16c1757fe685465dfcfa4e54c1a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_b746ee547291b435595c09bfe4976a709e6ff458/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-9.6.1_4c8454415ff5f3fdfb35c3afce065d06849c52c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a53ac0560ab915a02c50d2e5c7b003381e6fb5e3">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-9.6.1_1946049da0be1cbbea9eee000a623d4465576260/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_1cfec79a04115210b5ce3a16be32d00a7789dd08/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_3c694e73cb317292825fa046e847443092b834cf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.6.1_e568c2e20d9c765e39c833ee1c05052c8f5e0b08/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_1dca5d0dcbcd4b16a612cbd08755cfb7d130ae08/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.6.1_76d6902ddf980cb195f6539f2f26e0245021d81b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8981e6b550be49cea5ab94925daec6e7c078ed8e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_61df6ee6c83ddeca4a382746d3f99cdaa9d42e36/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.1_d9065fb8ea8fc739ec1e7f8db3bc9f2e4932a779/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_b14449fd38b04c20afa21859a13b1f27f9d744b4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_b77d59bbe601c7c7c046dfb81cef37fd0fdea45b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6ff796a3173787afe2e712f3aec6f5b99796118e">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.6.1_fe8daf03456773c1615fa59f64d7d9ffc57ce495/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.6.1_96e1ea1a37a43172c8028db1e421fb03e7ab8067/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="da3f763afd39da1c947d9442847c837e9182a09f">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-9.6.1_aa5e6319a7f6894e754a27388c553523893699bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.6.1_abeebfa3edce5893997d4893b18c169c614ed125/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f0e96478ca3147bc588aadb9ae467d85b42473cc">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-9.6.1_e91cb10f522ffa391c83031614b6e61fabf3ad0f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_e38f81359640682219c2d76a3532ab70719715c8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3d5b6d5bf3c1618e652670c62b7c4811664e3dac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4df40545c9b875855f3dd9d4928e5d07f07c20ba">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.6.1_a95958ff7e26f3067a5ead11bdf4ad74196b5bc2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.1_998813d00dfe295680802a5f1526cb845465f90b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.6.1_6ea6e82fe5291a20a4af974cdf9cd9c1635e6fa6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-9.6.1_e200a1fca4b2604eb0b45ad4441fe5d3284d2c53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.1_b26db99190cbcf0c65e21e47df2d947aefff48a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="518adc52081d41724932b41bc132e4d50a352b86">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.6.1_cafad4bba8698058c6e1f24d4d2385bb5b4a1f7a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_662fbfe6741f601fc6a879d28fb6de6352c51d6d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.1_57eaf80057c5fe549fef2f8cc25b64a3ec22e665/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1810ae0df0a1b9b539ce97df54e96f2bf8f5ff94">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-9.6.1_3311cc3d85d2fd4cb1deeafbc629f3fcb4cb41bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.6.1_31b0d78ac53516550dfce256d62b70a8ff2d94ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_6bde050351f088c72730be6d9c580ce675e1417d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.1_8273801f840b07b9881c1bbbe8de2036f53c43a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d45c048bb1c55cf963899190e507065aea8e5be9">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-9.6.1_8ea7caf5e60fe5614c328f7b1ace98ea65b5f0b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.6.1_e77b3d086ef08ad208e5c12e179c9625480371fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.6.1_7b84368add9bb2f3d71b0ef825e61fb2e1c952f8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.6.1_1ad8e59055daa6d8542337a76797beb5b7244a26/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-9.6.1_1d9fad5c54ca226532d30e011630a90361aa484a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/yoan/workspace/hhhckathon/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/home/yoan/workspace/hhhckathon/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_1a6834a401f0e11dd634bf0a70a55773e14478fc/classes.dex" />
     </item>
 
 </items>
