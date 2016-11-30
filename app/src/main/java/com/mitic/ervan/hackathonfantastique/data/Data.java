@@ -7,19 +7,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.mitic.ervan.hackathonfantastique.event.MyEvenementRecyclerViewAdapter;
-import com.google.firebase.database.FirebaseDatabase;
-import com.mitic.ervan.hackathonfantastique.data.Evenement;
-import com.mitic.ervan.hackathonfantastique.data.Parcours;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
-
-import static android.R.attr.data;
-
-
 /**
  * Created by yoan on 29/11/16.
  */

@@ -1,11 +1,8 @@
 package com.mitic.ervan.hackathonfantastique;
 
-import android.database.DataSetObserver;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,23 +13,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
-import com.mitic.ervan.hackathonfantastique.data.EvenementFactory;
 import com.mitic.ervan.hackathonfantastique.event.Event;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
@@ -68,8 +55,6 @@ public class MainActivity extends AppCompatActivity implements
 
         data = new Data();
 
-
-
         /**
          * Chargement des 100 premières données
          */
@@ -80,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements
          */
         data.chargerLesParcours();
 
-        Accueil accueil=Accueil.newInstance("param1","param2");
+        Accueil accueil=Accueil.newInstance();
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         fragmentManager.add(R.id.activity_main,accueil).commit();
     }
@@ -114,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private void retourAccueil(){
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
-        Fragment accueil = Accueil.newInstance("param","param");
+        Fragment accueil = Accueil.newInstance();
         FragmentManager fm = getSupportFragmentManager();
         for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
             fm.popBackStack();
@@ -210,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements
 
     public void mapAccueil(View view){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment mapEvent = MapRechercheEvent.newInstance("param1", "param2");
+        Fragment mapEvent = MapRechercheEvent.newInstance();
         fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
 

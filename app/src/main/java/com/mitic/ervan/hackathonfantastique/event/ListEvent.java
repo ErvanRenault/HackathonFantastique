@@ -6,16 +6,13 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.mitic.ervan.hackathonfantastique.R;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
 
-import java.util.List;
 
 
 /**

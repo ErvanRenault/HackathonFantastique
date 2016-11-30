@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.mitic.ervan.hackathonfantastique.R;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent.OnListFragmentInteractionListener;
-
 import java.util.List;
 
 /**

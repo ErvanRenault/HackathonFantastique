@@ -1,9 +1,7 @@
 package com.mitic.ervan.hackathonfantastique.data;
 
 import android.util.Log;
-
 import com.google.firebase.database.DataSnapshot;
-
 import java.util.ArrayList;
 import java.util.List;
 

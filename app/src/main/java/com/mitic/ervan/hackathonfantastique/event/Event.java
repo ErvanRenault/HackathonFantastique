@@ -1,11 +1,9 @@
 package com.mitic.ervan.hackathonfantastique.event;
 
-
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,13 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
 import com.mitic.ervan.hackathonfantastique.R;
-
 import java.io.InputStream;
 
 /**
@@ -34,9 +29,6 @@ public class Event extends Fragment {
 
     private View myInflatedView;
 
-    private static final String TITRE_EVENT = "param1";
-
-    // TODO: Rename and change types of parameters
     private static Evenement evenementStatic;
     private OnFragmentInteractionListener mListener;
 
@@ -45,24 +37,15 @@ public class Event extends Fragment {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
     public static Event newInstance(Evenement evenement) {
         Event fragment = new Event();
         evenementStatic = evenement;
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            //TODO
-            //ENLEVER LE STATIC
-            // titreEvent = getArguments().getString(TITRE_EVENT);
-            // Log.d("-----------------", "onCreate: "+ titreEvent);
-        }
     }
 
     @Override
@@ -150,7 +133,6 @@ public class Event extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onFragmentInteraction(Evenement event, int action);
     }
 
