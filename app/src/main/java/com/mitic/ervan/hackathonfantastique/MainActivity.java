@@ -121,15 +121,8 @@ public class MainActivity extends AppCompatActivity implements
 
     private void searchParcours() {
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
-        Fragment rechercheParcours = RechercheParcours.newInstance("param1", "param2");
-        fragmentManager.replace(R.id.activity_main, rechercheParcours).addToBackStack(null).commit();
-
-    }
-
-    public void rechercheParcours(View view){
-        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         Fragment parcours = ListeParcours.newInstance(1,data);
-        fragmentManager.replace(R.id.activity_main,parcours).commit();
+        fragmentManager.replace(R.id.activity_main,parcours).addToBackStack(null).commit();
     }
 
     public void ajouterEvenement(View view) {
