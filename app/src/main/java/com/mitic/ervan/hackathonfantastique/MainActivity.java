@@ -14,10 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -34,11 +36,16 @@ import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
+import com.mitic.ervan.hackathonfantastique.parcours.SpinAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener,GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener,Accueil.OnFragmentInteractionListener,MapRechercheEvent.OnFragmentInteractionListener, ListEvent.OnListFragmentInteractionListener,Event.OnFragmentInteractionListener{
 
     private Data data;
     private EvenementFactory evenementFactory;
+    private List<Evenement> parcoursCourant = new ArrayList<Evenement>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,10 +110,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         fragmentManager.replace(R.id.activity_main,gestionEvenement).addToBackStack(null).commit();
     }
 
-    private void  createParcours(){
+    private void createParcours(){
 
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment creerParcours= CreerParcours.newInstance("param1",data);
+        Fragment creerParcours= CreerParcours.newInstance("param1",data, this);
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
     }
 
@@ -118,9 +125,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     public void ajouterEvenement(View view) {
-
         ViewGroup layout = (ViewGroup) findViewById(R.id.elementsparcours);
         Spinner spinner = (Spinner) findViewById(R.id.spinnerparcours);
+
+        parcoursCourant.add((Evenement) (spinner.getSelectedItem()));
 
         final ViewGroup linearLayout = new LinearLayout(MainActivity.this);
         TextView nomEvent = new TextView(MainActivity.this);
@@ -140,10 +148,42 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
             }
         });
         nomEvent.setLayoutParams(paramsElem);
-        nomEvent.setText(spinner.getSelectedItem().toString());
+        nomEvent.setText(((Evenement)(spinner.getSelectedItem())).fields.titre_fr);
         linearLayout.addView(nomEvent);
         linearLayout.addView(erase);
         layout.addView(linearLayout);
+    }
+
+    public void updateSpinnerParcours () {
+        SpinAdapter adapter = new SpinAdapter(
+                this, android.R.layout.simple_spinner_item, data.getEvenementsVille(
+                ((Spinner) findViewById(R.id.spinnerville)).getSelectedItem().toString()
+        ));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner sItems = (Spinner) findViewById(R.id.spinnerparcours);
+        sItems.setAdapter(adapter);
+    }
+
+    public void ajouterParcours (View view) {
+        String temp = ((EditText)findViewById(R.id.nomcreationparcours)).getText().toString();
+        if (data.getParcoursById(temp) != null)
+            Log.d("TOAST: ", "Le nom de parcours \"" + temp + "\" est déjà utilisé.");
+        else {
+            data.addParcours(temp, cloneParcours());
+            clearParcoursCourant();
+            createParcours();
+        }
+    }
+
+    private List<Evenement> cloneParcours () {
+        List<Evenement> res = new ArrayList<Evenement>();
+        for (Evenement e : parcoursCourant)
+            res.add(e);
+        return res;
+    }
+
+    public void clearParcoursCourant () {
+        parcoursCourant.clear();
     }
 
     public void mapAccueil(View view){

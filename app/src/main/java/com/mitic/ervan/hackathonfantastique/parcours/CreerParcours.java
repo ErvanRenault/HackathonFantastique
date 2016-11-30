@@ -7,9 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.mitic.ervan.hackathonfantastique.MainActivity;
 import com.mitic.ervan.hackathonfantastique.R;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 
@@ -26,6 +28,7 @@ public class CreerParcours extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static Data data;
+    private static MainActivity activity;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -46,11 +49,12 @@ public class CreerParcours extends Fragment {
      * @return A new instance of fragment CreerParcours.
      */
     // TODO: Rename and change types and number of parameters
-    public static CreerParcours newInstance(String param1, Data data2) {
+    public static CreerParcours newInstance(String param1, Data data2, MainActivity mainActivity) {
         CreerParcours fragment = new CreerParcours();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         data = data2;
+        activity = mainActivity;
         fragment.setArguments(args);
         return fragment;
     }
@@ -76,6 +80,15 @@ public class CreerParcours extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Spinner sItems = (Spinner) inf.findViewById(R.id.spinnerville);
         sItems.setAdapter(adapter);
+
+        sItems.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                activity.updateSpinnerParcours();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
 
         return inf;
     }

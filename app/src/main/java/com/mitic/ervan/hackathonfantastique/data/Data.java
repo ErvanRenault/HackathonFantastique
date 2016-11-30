@@ -48,6 +48,9 @@ public class Data {
 
     public void addParcours (String id, List<Evenement> evenements) {
         parcours.put(id, new Parcours(id, evenements));
+        Log.d("SIZE: ", parcours.size()+"");
+        for (String s : parcours.keySet())
+            Log.d(s, parcours.get(s).toString());
     }
 
     public Parcours getParcoursById (String id) {
@@ -66,12 +69,12 @@ public class Data {
 
     public String[] getVilles () {
         String[] temp = new String[villesEvenements.size()];
-        String[] res = villesEvenements.keySet().toArray(temp);
-        return res;
+        return villesEvenements.keySet().toArray(temp);
     }
 
-    public String[] getEvenementsVille () {
-        return null;
+    public Evenement[] getEvenementsVille (String ville) {
+        Evenement[] res = new Evenement[villesEvenements.get(ville).size()];
+        return villesEvenements.get(ville).toArray(res);
     }
     //
 
