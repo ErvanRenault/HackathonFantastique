@@ -2,27 +2,63 @@ package com.mitic.ervan.hackathonfantastique.data;
 
 import android.util.Log;
 
-import com.mitic.ervan.hackathonfantastique.data.Evenement;
-import com.mitic.ervan.hackathonfantastique.data.Parcours;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.mitic.ervan.hackathonfantastique.event.MyEvenementRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
+
 /**
  * Created by yoan on 29/11/16.
  */
 
 public class Data {
-
+    private int marqueur;
+    private DatabaseReference myRef;
     private HashMap<String, Evenement> evenements = new HashMap<String, Evenement>();
     private HashMap<String, Parcours> parcours = new HashMap<String, Parcours>();
     private HashMap<String, List<Evenement>> villesEvenements = new HashMap<String, List<Evenement>>();
+    private List<Evenement> events = new ArrayList<Evenement>();
+    private EvenementFactory evenementFactory;
+
+    public Data(){
+        super();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("");
+        myRef.orderByKey();
+        evenementFactory = new EvenementFactory(this);
+        marqueur = 0;
+    }
+
+    public void chargerLaSuite(){
+        myRef.startAt(null, String.valueOf(marqueur)).limitToFirst(100).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                evenementFactory.ParseEvenement(dataSnapshot);
+                marqueur++;
+            }
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {}
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
+            @Override
+            public void onCancelled(DatabaseError databaseError) {}
+        });
+    }
 
     // Evenements
     public void AddEvenement (String id, Evenement evenement) {
         evenements.put(id, evenement);
+        events.add(evenement);
     }
 
     public Evenement getById (String id) {
@@ -34,10 +70,7 @@ public class Data {
     }
 
     public List<Evenement> getAllEvents(){
-        List<Evenement> res = new ArrayList<Evenement>();
-        for (String key : evenements.keySet())
-            res.add(evenements.get(key));
-        return res;
+        return events;
     }
     //
 

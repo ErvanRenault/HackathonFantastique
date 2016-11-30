@@ -30,7 +30,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
 import com.mitic.ervan.hackathonfantastique.data.EvenementFactory;
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements
         Parcours.OnListFragmentInteractionListener{
 
     private Data data;
-    private EvenementFactory evenementFactory;
     private List<Evenement> parcoursCourant = new ArrayList<Evenement>();
 
     @Override
@@ -67,27 +65,13 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         data = new Data();
-        evenementFactory = new EvenementFactory(data);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("");
-        Query refQuery = myRef.orderByKey().endAt("99");
 
-        // Read from the database
-        refQuery.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                evenementFactory.ParseEvenement(dataSnapshot);
-            }
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {}
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
-            @Override
-            public void onCancelled(DatabaseError databaseError) {}
-        });
+
+        /**
+         * Chargement des 100 premières données
+         */
+        data.chargerLaSuite();
 
         Accueil accueil=Accueil.newInstance("param1","param2");
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
@@ -137,8 +121,7 @@ public class MainActivity extends AppCompatActivity implements
         fragmentManager.replace(R.id.activity_main,gestionEvenement).addToBackStack(null).commit();
     }
 
-    private void createParcours(){
-
+    private void  createParcours(){
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment creerParcours= CreerParcours.newInstance("param1",data, this);
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();

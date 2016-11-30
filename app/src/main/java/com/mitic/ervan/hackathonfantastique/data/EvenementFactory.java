@@ -53,11 +53,13 @@ public class EvenementFactory {
                 case "adresse": res.adresse = row.getValue(String.class); break;
                 case "telephone_du_lieu": res.telephone_du_lieu = row.getValue(String.class); break;
                 case "dates": res.dates = row.getValue(String.class); break;
+                case "date_debut": res.date_debut = row.getValue(String.class); break;
                 case "image": res.image = row.getValue(String.class); break;
-                case "horaires_detailles_fr": res.horaires_detailles_fr = row.getValue(String.class);
-                case "lien_d_inscription" : res.lien_d_inscription = row.getValue(String.class);
-                case "organisateur" : res.organisateur = row.getValue(String.class);
-                case "ville" : res.ville = row.getValue(String.class);
+                case "horaires_detailles_fr": res.horaires_detailles_fr = row.getValue(String.class);break;
+                case "resume_horaires_fr": res.resume_horaires_fr = row.getValue(String.class);break;
+                case "lien_d_inscription" : res.lien_d_inscription = row.getValue(String.class);break;
+                case "organisateur" : res.organisateur = row.getValue(String.class);break;
+                case "ville" : res.ville = row.getValue(String.class);break;
                 default:
             }
         }

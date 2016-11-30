@@ -60,8 +60,8 @@ public class Event extends Fragment {
         if (getArguments() != null) {
             //TODO
             //ENLEVER LE STATIC
-           // titreEvent = getArguments().getString(TITRE_EVENT);
-           // Log.d("-----------------", "onCreate: "+ titreEvent);
+            // titreEvent = getArguments().getString(TITRE_EVENT);
+            // Log.d("-----------------", "onCreate: "+ titreEvent);
         }
     }
 
@@ -72,8 +72,8 @@ public class Event extends Fragment {
         myInflatedView = inflater.inflate(R.layout.fragment_event, container, false);
         ((TextView)myInflatedView.findViewById(R.id.nomevent)).setText(evenementStatic.fields.titre_fr);
         ((TextView)myInflatedView.findViewById(R.id.adresseevent)).setText(evenementStatic.fields.adresse);
-        ((TextView)myInflatedView.findViewById(R.id.dateevent)).setText(evenementStatic.fields.dates);
-        ((TextView)myInflatedView.findViewById(R.id.heureevent)).setText(evenementStatic.fields.horaires_detailles_fr);
+        ((TextView)myInflatedView.findViewById(R.id.dateevent)).setText(evenementStatic.fields.date_debut);
+        ((TextView)myInflatedView.findViewById(R.id.heureevent)).setText(evenementStatic.fields.resume_horaires_fr);
         ((TextView)myInflatedView.findViewById(R.id.telephoneevent)).setText(evenementStatic.fields.telephone_du_lieu);
         if(evenementStatic.fields.image != null) {
             new DownloadImageTask((ImageView) myInflatedView.findViewById(R.id.imageView3)).execute(evenementStatic.fields.image);

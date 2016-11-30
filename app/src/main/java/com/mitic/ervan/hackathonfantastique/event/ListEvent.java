@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import android.view.ViewGroup;
 import com.mitic.ervan.hackathonfantastique.R;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
+
+import java.util.List;
 
 
 /**
@@ -23,12 +26,11 @@ import com.mitic.ervan.hackathonfantastique.data.Evenement;
  */
 public class ListEvent extends Fragment {
 
-    // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
     private static Data data;
+    private MyEvenementRecyclerViewAdapter adapter;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -55,10 +57,11 @@ public class ListEvent extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_evenement_list, container, false);
 
@@ -71,11 +74,34 @@ public class ListEvent extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyEvenementRecyclerViewAdapter(data.getAllEvents(), mListener));
+            recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+                private boolean fin = false;
+
+                @Override
+                public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                    super.onScrollStateChanged(recyclerView, newState);
+                    if (newState == RecyclerView.SCROLL_STATE_SETTLING)
+                        fin = true;
+                    else
+                        fin = false;
+
+                }
+
+                @Override
+                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                    super.onScrolled(recyclerView, dx, dy);
+                    if (fin && dy > 0) {
+                        data.chargerLaSuite();
+                        fin = false;
+                    }
+                }
+            });
+
+            adapter = new MyEvenementRecyclerViewAdapter(data.getAllEvents(), mListener);
+            recyclerView.setAdapter(adapter);
         }
         return view;
     }
-
 
     @Override
     public void onAttach(Context context) {
