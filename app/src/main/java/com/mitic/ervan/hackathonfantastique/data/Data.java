@@ -39,14 +39,6 @@ public class Data {
             res.add(evenements.get(key));
         return res;
     }
-
-    public void initializeCities () {
-        for (String name : evenements.keySet()) {
-            if (!villesEvenements.keySet().contains(name))
-                villesEvenements.put(name, new ArrayList<Evenement>());
-            villesEvenements.get(name).add(evenements.get(name));
-        }
-    }
     //
 
     // Parcours
@@ -56,14 +48,33 @@ public class Data {
 
     public void addParcours (String id, List<Evenement> evenements) {
         parcours.put(id, new Parcours(id, evenements));
+        Log.d("SIZE: ", parcours.size()+"");
+        for (String s : parcours.keySet())
+            Log.d(s, parcours.get(s).toString());
     }
 
     public Parcours getParcoursById (String id) {
         return parcours.get(id);
     }
 
-    public Set<String> getVilles () {
-        return villesEvenements.keySet();
+    public void initializeCities () {
+        for (String id : evenements.keySet()) {
+            String ville = evenements.get(id).fields.ville;
+            if (ville == null) ville = "Autres";
+            if (!villesEvenements.keySet().contains(ville))
+                villesEvenements.put(ville, new ArrayList<Evenement>());
+            villesEvenements.get(ville).add(evenements.get(id));
+        }
+    }
+
+    public String[] getVilles () {
+        String[] temp = new String[villesEvenements.size()];
+        return villesEvenements.keySet().toArray(temp);
+    }
+
+    public Evenement[] getEvenementsVille (String ville) {
+        Evenement[] res = new Evenement[villesEvenements.get(ville).size()];
+        return villesEvenements.get(ville).toArray(res);
     }
     //
 

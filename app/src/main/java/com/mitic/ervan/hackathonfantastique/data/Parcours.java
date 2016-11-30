@@ -49,5 +49,12 @@ public class Parcours {
             res.add(evenements.get(i));
         return res;
     }
+
+    public String toString () {
+        String res = "";
+        for (Evenement event : evenements)
+            res += event.fields.titre_fr + ", ";
+        return res;
+    }
     
 }

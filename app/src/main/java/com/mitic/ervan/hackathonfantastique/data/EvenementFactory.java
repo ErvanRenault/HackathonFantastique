@@ -57,6 +57,7 @@ public class EvenementFactory {
                 case "horaires_detailles_fr": res.horaires_detailles_fr = row.getValue(String.class);
                 case "lien_d_inscription" : res.lien_d_inscription = row.getValue(String.class);
                 case "organisateur" : res.organisateur = row.getValue(String.class);
+                case "ville" : res.ville = row.getValue(String.class);
                 default:
             }
         }
