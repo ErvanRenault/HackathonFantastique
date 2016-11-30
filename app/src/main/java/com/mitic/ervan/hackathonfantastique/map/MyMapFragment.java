@@ -24,18 +24,20 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
 
     private float lat;
     private float lng;
+    private String adresse;
 
     GoogleMap mGoogleMap;
     MapView mMapView;
     View mView;
 
 
-    public static MyMapFragment newInstance(float lat, float lng) {
+    public static MyMapFragment newInstance(float lat, float lng, String adresse) {
 
         MyMapFragment fragment = new MyMapFragment();
         Bundle args = new Bundle();
         args.putFloat("latitude", lat);
         args.putFloat("longitude", lng);
+        args.putString("adresse", adresse);
         fragment.setArguments(args);
 
         return fragment;
@@ -47,6 +49,7 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
         if(getArguments() != null){
             lat = getArguments().getFloat("latitude");
             lng = getArguments().getFloat("longitude");
+            adresse = getArguments().getString("adresse");
         }
     }
 
@@ -73,11 +76,11 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
         LatLng position = new LatLng(this.lat, this.lng);
-        MarkerOptions marker = new MarkerOptions().position(position);
+        MarkerOptions marker = new MarkerOptions().position(position).title("Evenement Cité de la Science")
+                .snippet(this.adresse);
         googleMap.addMarker(marker);
         //Zoom in and animate the camera.
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 14));
-
 
 
         /**mGoogleMap = googleMap;
