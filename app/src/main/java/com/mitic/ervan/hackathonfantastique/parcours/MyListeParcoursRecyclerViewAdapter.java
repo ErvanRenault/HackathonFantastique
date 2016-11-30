@@ -1,44 +1,42 @@
 package com.mitic.ervan.hackathonfantastique.parcours;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mitic.ervan.hackathonfantastique.R;
-import com.mitic.ervan.hackathonfantastique.data.Evenement;
-import com.mitic.ervan.hackathonfantastique.parcours.Parcours.OnListFragmentInteractionListener;
+import com.mitic.ervan.hackathonfantastique.data.Parcours;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link Evenement} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
+ * {@link RecyclerView.Adapter} that can display a {@link com.mitic.ervan.hackathonfantastique.data.Parcours} and makes a call to the
+ * specified {@link ListeParcours.OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MyEventParcoursRecyclerViewAdapter extends RecyclerView.Adapter<MyEventParcoursRecyclerViewAdapter.ViewHolder> {
+public class MyListeParcoursRecyclerViewAdapter extends RecyclerView.Adapter<MyListeParcoursRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Evenement> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final List<com.mitic.ervan.hackathonfantastique.data.Parcours> mValues;
+    private final ListeParcours.OnListFragmentInteractionListener mListener;
 
-    public MyEventParcoursRecyclerViewAdapter(List<Evenement> items, OnListFragmentInteractionListener listener) {
+    public MyListeParcoursRecyclerViewAdapter(List<Parcours> items, ListeParcours.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyListeParcoursRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.fragment_evenement, parent, false);
-        return new ViewHolder(view);
+        return new MyListeParcoursRecyclerViewAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final MyListeParcoursRecyclerViewAdapter.ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mContentView.setText(mValues.get(position).fields.titre_fr);
+        holder.mContentView.setText(mValues.get(position).getId());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +58,7 @@ public class MyEventParcoursRecyclerViewAdapter extends RecyclerView.Adapter<MyE
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mContentView;
-        public Evenement mItem;
+        public Parcours mItem;
 
         public ViewHolder(View view) {
             super(view);

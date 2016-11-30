@@ -14,10 +14,15 @@ public class Parcours {
     private int courant;
     private String id;
 
+    public List<Evenement> getEvenements() {
+        return evenements;
+    }
+
     public Parcours(String id, List<Evenement> evenements) {
         this.id = id;
         this.evenements = evenements;
         courant = 0;
+
     }
 
     public String getId() {

@@ -39,6 +39,8 @@ import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
 import com.mitic.ervan.hackathonfantastique.map.MyMapFragment;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
+import com.mitic.ervan.hackathonfantastique.parcours.ListeParcours;
+import com.mitic.ervan.hackathonfantastique.parcours.Parcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.SpinAdapter;
 
@@ -53,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements
         MapRechercheEvent.OnFragmentInteractionListener,
         ListEvent.OnListFragmentInteractionListener,
         Event.OnFragmentInteractionListener,
-        com.mitic.ervan.hackathonfantastique.parcours.Parcours.OnListFragmentInteractionListener{
+        Parcours.OnListFragmentInteractionListener,
+        ListeParcours.OnListFragmentInteractionListener{
 
     private Data data;
     private List<Evenement> parcoursCourant = new ArrayList<Evenement>();
@@ -113,10 +116,10 @@ public class MainActivity extends AppCompatActivity implements
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         Fragment accueil = Accueil.newInstance("param","param");
         FragmentManager fm = getSupportFragmentManager();
-        fragmentManager.replace(R.id.activity_main,accueil).addToBackStack(null).commit();
         for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
             fm.popBackStack();
         }
+        fragmentManager.replace(R.id.activity_main,accueil).addToBackStack(null).commit();
 
     }
     private void gererEvent(){
@@ -140,8 +143,7 @@ public class MainActivity extends AppCompatActivity implements
 
     public void rechercheParcours(View view){
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
-        // TODO : renvoyer vers la liste
-        Fragment parcours = com.mitic.ervan.hackathonfantastique.parcours.Parcours.newInstance(1,null);
+        Fragment parcours = ListeParcours.newInstance(1,data);
         fragmentManager.replace(R.id.activity_main,parcours).commit();
     }
 
@@ -165,7 +167,6 @@ public class MainActivity extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 ((ViewGroup) linearLayout.getParent()).removeView(linearLayout);
-                Log.d("TAG", "onClick: erase");
             }
         });
         nomEvent.setLayoutParams(paramsElem);
@@ -224,6 +225,7 @@ public class MainActivity extends AppCompatActivity implements
         fragmentManager.replace(R.id.activity_main,listEvent).addToBackStack(null).commit();
     }
 
+
     @Override
     public void onFragmentInteraction(Evenement event, int action) {
 
@@ -270,5 +272,12 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onFragmentInteraction(Uri uri) {
 
+    }
+
+    @Override
+    public void onListFragmentInteraction(com.mitic.ervan.hackathonfantastique.data.Parcours parcours) {
+        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+        Fragment parcours1 = Parcours.newInstance(1,parcours);
+        fragmentManager.replace(R.id.activity_main,parcours1).addToBackStack(null).commit();
     }
 }

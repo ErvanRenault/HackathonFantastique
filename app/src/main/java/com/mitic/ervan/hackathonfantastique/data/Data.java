@@ -32,6 +32,7 @@ public class Data {
     private HashMap<String, Parcours> parcours = new HashMap<String, Parcours>();
     private HashMap<String, List<Evenement>> villesEvenements = new HashMap<String, List<Evenement>>();
     private List<Evenement> events = new ArrayList<Evenement>();
+    private List<Parcours> listParcours = new ArrayList<>();
     private EvenementFactory evenementFactory;
 
     public Data(){
@@ -114,9 +115,15 @@ public class Data {
 
     public void addParcoursFromFirebase (Parcours parcours) {
         this.parcours.put(parcours.getId(), parcours);
+        this.listParcours.add(parcours);
+
         Log.d("SIZE: ", this.parcours.size()+"");
         for (String s : this.parcours.keySet())
             Log.d(s, this.parcours.get(s).toString());
+    }
+
+    public List<Parcours> getListParcours() {
+        return listParcours;
     }
 
     public Parcours getParcoursById (String id) {

@@ -36,7 +36,7 @@ public class Parcours extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private Parcours.OnListFragmentInteractionListener mListener;
-    private static Data data;
+    private static com.mitic.ervan.hackathonfantastique.data.Parcours parcours;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -47,9 +47,9 @@ public class Parcours extends Fragment {
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static Parcours newInstance(int columnCount, Data donnee) {
+    public static Parcours newInstance(int columnCount, com.mitic.ervan.hackathonfantastique.data.Parcours donnee) {
         Parcours fragment = new Parcours();
-        data = donnee;
+        parcours = donnee;
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -70,7 +70,7 @@ public class Parcours extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_parcours, container, false);
-        RecyclerView recycler=(RecyclerView)((LinearLayout)((RelativeLayout)((FrameLayout)view).getChildAt(0)).getChildAt(0)).getChildAt(1);
+        RecyclerView recycler=(RecyclerView)((LinearLayout)((FrameLayout)view).getChildAt(0)).getChildAt(1);
         // Set the adapter
         if (recycler instanceof RecyclerView) {
             Context context = view.getContext();
@@ -80,12 +80,7 @@ public class Parcours extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            Evenement event = new Evenement();
-            event.fields = new Field();
-            event.fields.titre_fr = "testetetteteteeteteetetetet";
-            ArrayList<Evenement> list=new ArrayList<Evenement>();
-            list.add(event);
-            recyclerView.setAdapter(new MyEventParcoursRecyclerViewAdapter(list, mListener));
+            recyclerView.setAdapter(new MyEventParcoursRecyclerViewAdapter(parcours.getEvenements(), mListener));
         }
         return view;
     }
