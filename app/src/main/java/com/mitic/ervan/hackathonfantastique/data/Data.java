@@ -5,6 +5,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by yoan on 29/11/16.
@@ -14,9 +15,9 @@ public class Data {
 
     private HashMap<String, Evenement> evenements = new HashMap<String, Evenement>();
     private HashMap<String, Parcours> parcours = new HashMap<String, Parcours>();
+    private HashMap<String, List<Evenement>> villesEvenements = new HashMap<String, List<Evenement>>();
 
     // Evenements
-
     public void AddEvenement (String id, Evenement evenement) {
         evenements.put(id, evenement);
     }
@@ -32,10 +33,16 @@ public class Data {
         return res;
     }
 
+    public void initializeCities () {
+        for (String name : evenements.keySet()) {
+            if (!villesEvenements.keySet().contains(name))
+                villesEvenements.put(name, new ArrayList<Evenement>());
+            villesEvenements.get(name).add(evenements.get(name));
+        }
+    }
     //
 
     // Parcours
-
     public boolean idParcoursUtilise (String id) {
         return parcours.keySet().contains(id);
     }
@@ -48,6 +55,9 @@ public class Data {
         return parcours.get(id);
     }
 
+    public Set<String> getVilles () {
+        return villesEvenements.keySet();
+    }
     //
 
 }
