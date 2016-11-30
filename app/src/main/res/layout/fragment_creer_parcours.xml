@@ -4,10 +4,69 @@
     android:layout_height="match_parent"
     tools:context="com.mitic.ervan.hackathonfantastique.parcours.CreerParcours">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Creer parcours" />
+        android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/addparcours">
+            <!-- TODO: Update blank fragment layout -->
+            <LinearLayout
+                android:id="@+id/lignecreerparcours"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Creer un parcours"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/elementsparcours"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Spinner
+                            android:id="@+id/spinnerparcours"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:entries="@array/inscription" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:onClick="ajouterEvenement"
+                            android:text="ajouter" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/addparcours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="ajouterParcours"
+            android:text="ajouter parcours" />
+    </RelativeLayout>
 </FrameLayout>

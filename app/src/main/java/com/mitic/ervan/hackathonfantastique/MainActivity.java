@@ -10,6 +10,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -42,12 +47,9 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         data = new Data();
         evenementFactory = new EvenementFactory(data);
 
-
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("");
         Query refQuery = myRef.orderByKey().endAt("99");
-
 
         // Read from the database
         refQuery.addChildEventListener(new ChildEventListener() {
@@ -101,11 +103,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     private void  createParcours(){
-
-        for (Evenement event : data.getAllEventsBy100()){
-            Log.d("TEST", "createParcours: " + event.toString());
-        }
-
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment creerParcours= CreerParcours.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
@@ -116,6 +113,35 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         Fragment rechercheParcours= RechercheParcours.newInstance("param1","param2");
         fragmentManager.replace(R.id.activity_main,rechercheParcours).addToBackStack(null).commit();
 
+    }
+
+    public void ajouterEvenement(View view) {
+
+        ViewGroup layout = (ViewGroup) findViewById(R.id.elementsparcours);
+        Spinner spinner = (Spinner) findViewById(R.id.spinnerparcours);
+
+        final ViewGroup linearLayout = new LinearLayout(MainActivity.this);
+        TextView nomEvent = new TextView(MainActivity.this);
+        final Button erase = new Button(MainActivity.this);
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams paramsElem = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f);
+
+        linearLayout.setLayoutParams(params);
+        erase.setLayoutParams(paramsElem);
+        erase.setText("retirer");
+        erase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((ViewGroup) linearLayout.getParent()).removeView(linearLayout);
+                Log.d("TAG", "onClick: erase");
+            }
+        });
+        nomEvent.setLayoutParams(paramsElem);
+        nomEvent.setText(spinner.getSelectedItem().toString());
+        linearLayout.addView(nomEvent);
+        linearLayout.addView(erase);
+        layout.addView(linearLayout);
     }
 
     public void mapAccueil(View view){
