@@ -99,23 +99,24 @@
                     <Button
                         android:text="Map"
                         android:layout_width="60dp"
+                        android:id="@+id/mapButton"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.06"
                         android:onClick="mapDetail" />
 
                     <TextView
-                        android:text="adresseMail"
                         android:layout_width="259dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView4"
-                        android:gravity="center" />
+                        android:gravity="center"
+                        android:text="Adresse Mail"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="139dp"
+                    android:layout_height="132dp"
                     android:gravity="center"
                     android:weightSum="1">
 
@@ -125,7 +126,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/telephoneevent"
                         android:gravity="center"
-                        android:paddingBottom="10dp" />
+                        android:paddingBottom="10dp"
+                        android:layout_weight="0.57" />
 
                     <CheckBox
                         android:text="Je participe"
@@ -135,35 +137,50 @@
                         android:id="@+id/checkBox"
                         android:layout_weight="0.22" />
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="47dp">
+                </LinearLayout>
 
-                        <RatingBar
-                            android:id="@+id/rating"
-                            android:layout_width="228dp"
-                            android:layout_height="40dp"
-                            style="?android:attr/ratingBarStyleSmall"
-                            android:numStars="5"
-                            android:stepSize="1"
-                            android:isIndicator="true"
-                            android:layout_weight="1" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.08"
+                    android:gravity="bottom">
 
-                        <Button
-                            android:text="F"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/button7"
-                            android:layout_weight="1" />
+                    <RatingBar
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        style="?android:attr/ratingBarStyle"
+                        android:numStars="5"
+                        android:stepSize="0.5"
+                        android:layout_gravity="center"
+                        />
 
-                        <Button
-                            android:text="T"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
-                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/facebookbutton"
+                        android:layout_width="15dp"
+                        android:layout_height="57dp"
+                        android:scaleType="centerInside"
+                        android:adjustViewBounds="true"
+                        android:background="#00000000"
+                        android:src="@drawable/facebooksquare"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:clickable="false"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.50" />
 
+                    <ImageButton
+                        android:id="@+id/twitterbutton"
+                        android:layout_width="19dp"
+                        android:layout_height="58dp"
+                        android:scaleType="centerInside"
+                        android:adjustViewBounds="true"
+                        android:background="#00000000"
+                        android:src="@drawable/twitter"
+                        style="@style/Widget.AppCompat.ImageButton"
+                        android:clickable="false"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.50" />
                 </LinearLayout>
 
             </LinearLayout>

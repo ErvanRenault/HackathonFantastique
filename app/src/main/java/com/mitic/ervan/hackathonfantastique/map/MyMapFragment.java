@@ -28,22 +28,32 @@ import com.mitic.ervan.hackathonfantastique.R;
 
 public class MyMapFragment extends Fragment implements OnMapReadyCallback {
 
+    private float lat;
+    private float lng;
+
     GoogleMap mGoogleMap;
     MapView mMapView;
     View mView;
 
 
-    public static MyMapFragment newInstance() {
+    public static MyMapFragment newInstance(float lat, float lng) {
+
         MyMapFragment fragment = new MyMapFragment();
         Bundle args = new Bundle();
+        args.putFloat("latitude", lat);
+        args.putFloat("longitude", lng);
         fragment.setArguments(args);
+
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if(getArguments() != null){
+            lat = getArguments().getFloat("latitude");
+            lng = getArguments().getFloat("longitude");
+        }
     }
 
 
@@ -67,12 +77,13 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mGoogleMap = googleMap;
 
-        MapsInitializer.initialize(getContext());
-        MarkerOptions marker = new MarkerOptions();
-        marker.position(new LatLng(39,-74)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        LatLng position = new LatLng(this.lat, this.lng);
+        MarkerOptions marker = new MarkerOptions().position(position);
         googleMap.addMarker(marker);
+        //Zoom in and animate the camera.
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 12));
+
 
 
         /**mGoogleMap = googleMap;

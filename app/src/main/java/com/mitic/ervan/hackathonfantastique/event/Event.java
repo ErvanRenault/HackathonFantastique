@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -85,13 +86,25 @@ public class Event extends Fragment {
         else
             ((TextView)myInflatedView.findViewById(R.id.textView4)).setText("");
 
+
+        Button mapButton = (Button) myInflatedView.findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                // process and construct uri
+
+                onButtonPressed(evenementStatic);
+            }
+        });
+
         return myInflatedView;
     }
 
+
+
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed(Evenement event) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onFragmentInteraction(event);
         }
     }
 
@@ -124,7 +137,7 @@ public class Event extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(Evenement event);
     }
 
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {

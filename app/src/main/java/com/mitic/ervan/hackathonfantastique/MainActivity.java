@@ -29,6 +29,7 @@ import com.mitic.ervan.hackathonfantastique.event.Event;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
 import com.mitic.ervan.hackathonfantastique.map.MapRechercheEvent;
+import com.mitic.ervan.hackathonfantastique.map.MyMapFragment;
 import com.mitic.ervan.hackathonfantastique.parcours.CreerParcours;
 import com.mitic.ervan.hackathonfantastique.parcours.RechercheParcours;
 
@@ -45,9 +46,12 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         data = new Data();
         evenementFactory = new EvenementFactory(data);
 
+
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("");
         Query refQuery = myRef.orderByKey().endAt("99");
+
 
         // Read from the database
         refQuery.addChildEventListener(new ChildEventListener() {
@@ -149,9 +153,8 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     public void mapDetail(View view){
-        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
-        Fragment mapEvent = MapRechercheEvent.newInstance("param1","param2");
-        fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
+
+
     }
 
     public void listAccueil(View view){
@@ -161,8 +164,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
-
+    public void onFragmentInteraction(Evenement event) {
+        FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
+        Fragment mapEvent = MyMapFragment.newInstance(event.geometry.one,event.geometry.zero);
+        fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
 
     @Override
@@ -170,6 +175,11 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         Fragment event = Event.newInstance(event_old);
         fragmentManager.replace(R.id.activity_main,event).addToBackStack(null).commit();
+
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
