@@ -82,7 +82,7 @@ public class MyMapFragment extends Fragment implements OnMapReadyCallback {
         MarkerOptions marker = new MarkerOptions().position(position);
         googleMap.addMarker(marker);
         //Zoom in and animate the camera.
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 12));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, 14));
 
 
 

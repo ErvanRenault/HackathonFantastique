@@ -107,7 +107,7 @@
                     <TextView
                         android:layout_width="259dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView4"
+                        android:id="@+id/adresseEmail"
                         android:gravity="center"
                         android:text="Adresse Mail"/>
 
@@ -125,6 +125,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/telephoneevent"
+                        android:onClick="mapDetail"
                         android:gravity="center"
                         android:paddingBottom="10dp"
                         android:layout_weight="0.57" />

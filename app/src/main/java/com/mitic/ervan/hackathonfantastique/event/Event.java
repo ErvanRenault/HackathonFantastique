@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -82,17 +83,30 @@ public class Event extends Fragment {
         else
             ((TextView)myInflatedView.findViewById(R.id.nomorganisateur)).setText("");
         if(evenementStatic.fields.lien_d_inscription != null)
-            ((TextView)myInflatedView.findViewById(R.id.textView4)).setText(evenementStatic.fields.lien_d_inscription);
+            ((TextView)myInflatedView.findViewById(R.id.adresseEmail)).setText(evenementStatic.fields.lien_d_inscription);
         else
-            ((TextView)myInflatedView.findViewById(R.id.textView4)).setText("");
+            ((TextView)myInflatedView.findViewById(R.id.adresseEmail)).setText("");
 
 
         Button mapButton = (Button) myInflatedView.findViewById(R.id.mapButton);
         mapButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                // process and construct uri
 
-                onButtonPressed(evenementStatic);
+                onButtonPressed(evenementStatic, 1);
+            }
+        });
+
+        TextView phone = (TextView) myInflatedView.findViewById(R.id.telephoneevent);
+        phone.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                onButtonPressed(evenementStatic, 2);
+            }
+        });
+
+        TextView email = (TextView) myInflatedView.findViewById(R.id.adresseEmail);
+        email.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                onButtonPressed(evenementStatic, 3);
             }
         });
 
@@ -102,9 +116,9 @@ public class Event extends Fragment {
 
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Evenement event) {
+    public void onButtonPressed(Evenement event, int action) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(event);
+            mListener.onFragmentInteraction(event, action);
         }
     }
 
@@ -137,7 +151,7 @@ public class Event extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Evenement event);
+        void onFragmentInteraction(Evenement event, int action);
     }
 
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
