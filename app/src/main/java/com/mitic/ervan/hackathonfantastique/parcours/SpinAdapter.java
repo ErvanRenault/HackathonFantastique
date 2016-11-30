@@ -14,19 +14,10 @@ import com.mitic.ervan.hackathonfantastique.data.Evenement;
  */
 
 public class SpinAdapter extends ArrayAdapter<Evenement> {
-
-
-
-
-
-
     // Your sent context
     private Context context;
     // Your custom values for the spinner (User)
     private Evenement[] values;
-
-
-
 
     public SpinAdapter(Context context, int textViewResourceId,
                        Evenement[] values) {

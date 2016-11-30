@@ -1,11 +1,8 @@
 package com.mitic.ervan.hackathonfantastique;
 
-import android.database.DataSetObserver;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,25 +13,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.facebook.FacebookSdk;
-
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.mitic.ervan.hackathonfantastique.data.Data;
 import com.mitic.ervan.hackathonfantastique.data.Evenement;
-import com.mitic.ervan.hackathonfantastique.data.EvenementFactory;
 import com.mitic.ervan.hackathonfantastique.event.Event;
 import com.mitic.ervan.hackathonfantastique.event.ListEvent;
 import com.mitic.ervan.hackathonfantastique.gestion.GestionEvenement;
@@ -49,12 +34,16 @@ import com.mitic.ervan.hackathonfantastique.parcours.SpinAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static android.R.id.shareText;
-
-public class MainActivity extends AppCompatActivity implements CreerParcours.OnFragmentInteractionListener, GestionEvenement.OnFragmentInteractionListener, RechercheParcours.OnFragmentInteractionListener, Accueil.OnFragmentInteractionListener, MapRechercheEvent.OnFragmentInteractionListener, ListEvent.OnListFragmentInteractionListener, Event.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements
+        CreerParcours.OnFragmentInteractionListener,
+        GestionEvenement.OnFragmentInteractionListener,
+        RechercheParcours.OnFragmentInteractionListener,
+        Accueil.OnFragmentInteractionListener,
+        MapRechercheEvent.OnFragmentInteractionListener,
+        ListEvent.OnListFragmentInteractionListener,
+        Event.OnFragmentInteractionListener,
+        Parcours.OnListFragmentInteractionListener,
+        ListeParcours.OnListFragmentInteractionListener{
 
     private Data data;
     private List<Evenement> parcoursCourant = new ArrayList<Evenement>();
@@ -66,7 +55,15 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
         data = new Data();
 
+        /**
+         * Chargement des 100 premières données
+         */
+        data.chargerLaSuite();
 
+        /**
+         * Chargement des parcours
+         */
+        data.chargerLesParcours();
 
         Accueil accueil=Accueil.newInstance();
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
@@ -120,7 +117,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager =  getSupportFragmentManager().beginTransaction();
         Fragment creerParcours= CreerParcours.newInstance("param1",data, this);
         fragmentManager.replace(R.id.activity_main,creerParcours).addToBackStack(null).commit();
-
     }
 
     private void searchParcours() {
@@ -130,7 +126,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
     }
 
     public void ajouterEvenement(View view) {
-
         ViewGroup layout = (ViewGroup) findViewById(R.id.elementsparcours);
         Spinner spinner = (Spinner) findViewById(R.id.spinnerparcours);
 
@@ -150,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
             @Override
             public void onClick(View v) {
                 ((ViewGroup) linearLayout.getParent()).removeView(linearLayout);
-                Log.d("TAG", "onClick: erase");
             }
         });
         nomEvent.setLayoutParams(paramsElem);
@@ -197,8 +191,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         Fragment mapEvent = MapRechercheEvent.newInstance();
         fragmentManager.replace(R.id.activity_main,mapEvent).addToBackStack(null).commit();
     }
-
-
 
     public void mapDetail(View view) {
 
@@ -268,7 +260,6 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
         FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
         Fragment event = Event.newInstance(event_old);
         fragmentManager.replace(R.id.activity_main,event).addToBackStack(null).commit();
-
     }
 
     @Override
@@ -276,4 +267,10 @@ public class MainActivity extends AppCompatActivity implements CreerParcours.OnF
 
     }
 
+    @Override
+    public void onListFragmentInteraction(com.mitic.ervan.hackathonfantastique.data.Parcours parcours) {
+        FragmentTransaction fragmentManager = getSupportFragmentManager().beginTransaction();
+        Fragment parcours1 = Parcours.newInstance(1,parcours);
+        fragmentManager.replace(R.id.activity_main,parcours1).addToBackStack(null).commit();
+    }
 }
